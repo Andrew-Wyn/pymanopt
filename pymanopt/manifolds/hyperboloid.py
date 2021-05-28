@@ -7,7 +7,9 @@ from pymanopt.manifolds.manifold import Manifold
 
 class Hyperboloid(Manifold):
     def __init__(self, dimension):
-        super().__init__(self, "Hyperboloid", dimension)
+        super().__init__(
+            self, "Hyperboloid over R^{}:1".format(dimension), dimension
+            )
 
     def _minkowski_dot(self, X, Y):
         return np.dot(X[:-1], Y[:-1]) - X[-1]*Y[-1]

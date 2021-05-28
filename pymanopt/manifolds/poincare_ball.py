@@ -9,7 +9,9 @@ from pymanopt.manifolds.manifold import Manifold
 
 class PoincareBall(Manifold):
     def __init__(self, dimension):
-        super().__init__(f"PoincareBall over R^{dimension}", dimension)
+        super().__init__(
+            "PoincareBall over R^{}".format(dimension), dimension
+            )
 
     def conformal_factor(self, x):
         return 2/(1 - np.dot(x, x))
