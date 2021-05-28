@@ -1,8 +1,9 @@
-from random import random
 import math
+from random import random
 
 import numpy as np
 import numpy.linalg as la
+
 from pymanopt.manifolds.manifold import Manifold
 
 
